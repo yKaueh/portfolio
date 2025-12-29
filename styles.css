@@ -1,0 +1,137 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BASE */
+:root{
+    --primary: #88D9E6;
+    --primary-light: #C5FFFD;
+    --primary-dark: #4FB3C8;
+    --secondary: #526760;
+    --secondary-light: #A7E3D0;
+    --secondary-dark: #374B4A;
+    --tertiary: #8B8BAE;
+    --tertiary-light: #B3B3D6;
+    --tertiary-dark: #5F5F87;
+    --dark: #2c3e50;
+    --light: #ecf0f1;
+    --gray: #7f8c8d;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: var(--dark);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    cursor: default;
+}
+
+main{
+    flex: 1;
+    padding: 0 1.25rem;
+}
+
+a {
+    color: var(--dark);
+    text-decoration: underline;
+    text-decoration-color: var(--secondary);
+    text-underline-offset: 3px;
+    transition: color .3s ease;
+}
+a:hover{
+    color: var(--primary-dark);
+}
+
+ul{
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+/* COMPONENTS */
+
+.container-de-cards article{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-width: 250px;
+    max-width: 300px;
+    padding: 1rem;
+    background-color: var(--primary);
+    border-radius: 20px
+}
+
+.container-de-cards article.habilidade{
+    width: 80%;
+}
+
+.container-de-cards ul{
+    padding-left: 1.25rem;
+    text-align: left;
+    border-top: 1px solid var(--primary-dark);
+    list-style: disc;
+    list-style-position: inside;
+}
+
+.links-do-projeto-container{
+    margin-top: auto;
+}
+
+/* LAYOUT */
+
+header{
+    height: 70px;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+} 
+
+nav ul{
+    display: flex;
+    gap: .5rem;
+}
+
+section{
+    margin: 1.5rem 0;
+    padding: 1.25rem;
+    background-color: var(--light);
+    border-radius: 20px;
+}
+
+section h2{
+    margin-bottom: 1rem;
+}
+
+section p{
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.container-de-cards{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+#projetos .container-de-cards{
+    justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+    #projetos .container-de-cards {
+        justify-content: center;
+    }
+}
